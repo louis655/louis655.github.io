@@ -39,6 +39,20 @@ export default function HeroSection() {
           </h1>
         </FadeIn>
 
+        {/* 拼音名：英文名序，宽字距，与下方中文名呼应 */}
+        <FadeIn delay={0.18} y={24}>
+          <p
+            className="font-bold text-[#0A2F9E] mb-4 sm:mb-5"
+            style={{
+              fontSize: 'clamp(0.9rem, 2vw, 1.75rem)',
+              letterSpacing: '0.32em',
+              marginRight: '-0.32em',
+            }}
+          >
+            LUYI JIANG
+          </p>
+        </FadeIn>
+
         {/* 正文：较小字号，两行打字机 */}
         <FadeIn delay={0.2} y={20}>
           <p
