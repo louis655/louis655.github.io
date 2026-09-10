@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: #f4f5f7;
+  font-family: 'Archivo', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+}
+
+.hero-heading {
+  font-family: 'Space Grotesk', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  background: linear-gradient(180deg, #0a2f9e 0%, #2d5be3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.type-cursor {
+  display: inline-block;
+  animation: type-blink 1s step-end infinite;
+}
+
+.section-title-gradient {
+  font-family: 'PingFang SC', 'SF Pro', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  background: linear-gradient(135deg, #0a2f9e 0%, #2d5be3 45%, #34b39a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 14px rgba(10, 47, 158, 0.16));
+}
+
+.skill-label-gradient {
+  font-family: 'Archivo', 'PingFang SC', 'SF Pro', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  background: linear-gradient(135deg, #0a2f9e 0%, #34b39a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 1px 8px rgba(10, 47, 158, 0.12));
+}
+
+.skill-bar-gradient {
+  background: linear-gradient(180deg, #0a2f9e 0%, #34b39a 100%);
+}
+
+/* Hero 渐变标题里光标需要恢复实色，否则被 text-fill:transparent 隐藏 */
+.hero-cursor {
+  -webkit-text-fill-color: #0a2f9e;
+  color: #0a2f9e;
+  font-weight: 400;
+}
+
+.body-cursor {
+  color: #0a2f9e;
+  font-weight: 400;
+}
+
+@keyframes type-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .type-cursor {
+    animation: none;
+  }
+}

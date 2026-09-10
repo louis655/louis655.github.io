@@ -1,0 +1,15 @@
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+  /* 浅灰底 + 克莱因蓝光效：加色发光呈现为柔和蓝色光晕（参考图效果）。
+     整体调淡，与浅灰底更协调、不抢戏。 */
+  opacity: 0.55;
+}
+
+.light-rays-container canvas {
+  display: block;
+}
