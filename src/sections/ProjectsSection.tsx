@@ -53,7 +53,7 @@ const PROJECTS: Project[] = [
     number: '02',
     name: '装扮竞品分析',
     cta: '点击查看完整报告',
-    href: 'https://louis-board-production.up.railway.app/tencent-report-copy/index.html',
+    href: 'https://louis655.github.io/tencent-report/tencent-report-copy/',
     images: [],
     analysis: {
       image: '/images/zhuangban-report.jpg',
