@@ -277,14 +277,7 @@ function ProjectCard({
                       style={{ boxShadow: '0 16px 40px rgba(10,47,158,0.10)' }}
                     />
                     <div className="w-[86vw] md:w-[576px] shrink-0 flex flex-col gap-3 md:gap-4">
-                      <div
-                        className="relative z-10 h-[320px] w-[320px] sm:h-[400px] sm:w-[400px] lg:h-[440px] lg:w-[440px] shrink-0"
-                        style={{ transform: 'translateY(-9.0909vh)' }}
-                      >
-                        {/* baseY 0.18 + frameMargin 1.1：浮动顶点 0.23 < 0.3 裁头线，上浮全程头顶/悬浮面板不出取景框不被裁 */}
-                        <Model3DViewer modelPath="/models/zhuangban.glb" baseY={0.18} frameMargin={1.1} lightBoost={1.8} />
-                      </div>
-                      <div className="flex flex-col gap-3 md:gap-4 -mt-[25vh]">
+                      <div className="flex flex-col gap-3 md:gap-4">
                         <h4 className="flex items-center gap-2.5 text-[#0A2F9E] font-black text-[1.25rem] sm:text-[1.45rem]">
                           <span className="inline-block w-1.5 h-6 rounded-full bg-[#0A2F9E]" />
                           {project.analysis.title}

@@ -1,8 +1,11 @@
 import FadeIn from '../components/FadeIn'
 
-// 自我介绍（突出产品能力 + 专业背景；无句号）
-const INTRO_TEXT =
-  '27届硕士，具备腾讯、得物、美团、携程互联网产品实习经历，聚焦 AI 应用、数据驱动产品与复杂业务系统建设；熟悉从用户洞察、需求抽象到产品设计、实验验证和平台落地的完整流程'
+// 自我介绍（3 行，每行格式 "小标题：内容"，小标题加粗显示；无句号）
+const INTRO_LINES = [
+  '互联网产品经验：四段互联网产品实习经验，聚焦C端消费链路优化，覆盖商业化、电商、本地生活及旅游场景',
+  '业务与产品能力：具备业务分析、需求拆解、方案设计与效果验证能力，能够围绕用户需求和业务目标推动产品优化',
+  '技能：熟练运用Python、SQL分析数据，掌握Figma、ChatGPT、ClaudeCode等工具，结合AI提升效率；雅思7分',
+]
 
 // 教育经历
 const EDUCATION = [
@@ -80,14 +83,26 @@ export default function AboutSection() {
             </div>
           </FadeIn>
 
-          {/* 自我介绍（宽度对齐"所获荣誉"行、左对齐） */}
+          {/* 自我介绍（3 行：小标题加粗 + 正文，宽度对齐"所获荣誉"行、左对齐） */}
           <FadeIn delay={0.22} y={20} className="w-full">
-            <p
-              className="text-[#3A4256] font-medium leading-relaxed mb-9 sm:mb-11 w-full"
+            <div
+              className="text-[#3A4256] font-medium leading-relaxed mb-9 sm:mb-11 w-full flex flex-col gap-2"
               style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.15rem)', textAlign: 'left' }}
             >
-              {INTRO_TEXT}
-            </p>
+              {INTRO_LINES.map((line) => {
+                const ci = line.indexOf('：')
+                const label = ci > 0 ? line.slice(0, ci) : ''
+                const rest = ci > 0 ? line.slice(ci + 1) : line
+                return (
+                  <p key={label || line}>
+                    {label && (
+                      <span className="font-bold text-[#0A2F9E]">{label}：</span>
+                    )}
+                    {rest}
+                  </p>
+                )
+              })}
+            </div>
           </FadeIn>
 
           {/* 教育经历 */}
